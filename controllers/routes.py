@@ -10,8 +10,8 @@ def init_app(app):
     @app.route('/add', methods=['GET','POST'])
     def add():
         if request.method == 'POST':
-            produto = Produto(request.form['valor'], request.form['nome'], request.form['descricao'])
-            db.session.add(produto)
+            produtos = Produto(request.form['nome'], request.form['descricao'], request.form['valor'])
+            db.session.add(produtos)
             db.session.commit()
             return redirect(url_for('gerenciar'))
         return render_template('add.html')
@@ -23,21 +23,20 @@ def init_app(app):
 
     @app.route('/edit/<int:id>', methods=['GET','POST'])
     def edit(id):
-        produto = Produto.query.get(id)
+        produtos = Produto.query.get(id)
         if request.method == 'POST':
            
-            produto.imagem = request.form['imagem']
-            produto.nome = request.form['nome']
-            produto.valor = request.form['valor']
-            produto.descricao = request.form['descricao']
+            produtos.nome = request.form['nome']
+            produtos.valor = request.form['valor']
+            produtos.descricao = request.form['descricao']
             db.session.commit()
             return redirect(url_for('gerenciar'))
-        return render_template('edit.html', produto = produto)
+        return render_template('edit.html', produtos = produtos)
 
     @app.route('/delete/<int:id>')
     def delete(id):
-        produto = Produto.query.get(id)
+        produtos = Produto.query.get(id)
         # Deleta o dado, a partir da ID
-        db.session.delete(produto)
+        db.session.delete(produtos)
         db.session.commit()
         return redirect(url_for('gerenciar'))

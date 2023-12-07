@@ -25,7 +25,7 @@
 <body>
     <div class="cad">
       <h1 class="title" >Cadastrar novo produto</h1>
-       <form name="upload" enctype="multipart/form-data" action="/add" method="post" action="/add" method="post">
+       <form name="upload" enctype="multipart/form-data" action="/add" method="post">
           <div class="mb-3 mt-3">
             <label for="nome" class="form-label">Nome:</label>
             <input type="text" class="form-control" id="nome" placeholder="Nome do produto" name="nome" required>
@@ -36,12 +36,6 @@
           </div>
           <label for="descricao" class="form-label">Descrição:</label>
           <textarea class="form-control" rows="2" id="descricao" placeholder="Descrição do produto" name="descricao"></textarea>
-          <!-- <select name="imagem" id="imagem" class="form-select mb-3" aria-label="Selecione o produto">
-            <option selected>Imagem</option>
-            <option value="racao">Ração</option>
-            <option value="shampoo">Shampoo</option>
-            <option value="cama">Cama</option>
-        </select> -->
           <p><button type="submit" href="/gerenciar">Enviar</button></p>
         </form>
     </div>
@@ -61,6 +55,7 @@
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border: 1px solid #b053e6; /* Tom de laranja mais escuro */
+  margin: 3vh;
 }
 .title{
   color: #522d58;

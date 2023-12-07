@@ -14,7 +14,6 @@ db = SQLAlchemy()
 
 class Produto(db.Model):
     id = db.Column('id', db.Integer, primary_key=True, autoincrement=True)
-    imagem = db.Column(db.String(50))
     nome = db.Column(db.String(150))
     descricao = db.Column(db.String[500])
     valor = db.Column(db.Float)
