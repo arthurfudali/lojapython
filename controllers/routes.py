@@ -10,7 +10,7 @@ def init_app(app):
     @app.route('/add', methods=['GET','POST'])
     def add():
         if request.method == 'POST':
-            produto = Produto(request.form['imagem'], request.form['nome'], request.form['descricao'])
+            produto = Produto(request.form['valor'], request.form['nome'], request.form['descricao'])
             db.session.add(produto)
             db.session.commit()
             return redirect(url_for('gerenciar'))
