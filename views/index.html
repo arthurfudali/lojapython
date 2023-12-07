@@ -42,14 +42,67 @@
         {% endfor %}
     </tbody> -->
     <header>
-        <div class="navbar">
-            <img src="" alt="logo">
-            <a href="/add"></a>
-            <a href="/gerenciar"></a>
-        </div>
+
+        <nav class="navbar">
+            <div class="img col-8 ">
+                <img class="" id="img-logo" src="../static/logo.png" alt="logo">
+            </div>
+            <div class="links col-4">
+                <a class="nav-link" href="/add">Adicionar</a>
+                <a class="nav-link" href="/gerenciar">Editar</a>
+            </div>
+        </nav>
+
+        <section id="ofertas">
+            <div class="title">
+                <h1 id="title">OFERTAS</h1>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 img-container ">
+                        <img id="product-big" class="product-img" src="../static/poodle.png" alt="poodle">
+                        <p id="product-price"> $60</p>
+                    </div>
+
+                    <div class="col-12 img-container">
+                        <img id="product-big" class="product-img" src="../static/ovelha.png" alt="ovelha">
+                        <p id="product-price"> $55 </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="amigurumi">
+            <div class="title">
+                <h1 class="title-light" id="title">AMIGURUMIS</h1>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 img-container">
+                        <img id="product-big" class="product-img" src="../static/anjo.png" alt="anjo">
+                        <p id="product-price"> $60 </p>
+                    </div>
+                    <div class="img-container col-6">
+                        <img id="product-small" class="product-img" src="../static/santa.png" alt="santa">
+                        <p id="product-price"> $120 </p>
+                    </div>
+                    <div class="img-container col-6">
+                        <img id="product-small" class="product-img" src="../static/reismagos.png" alt="tres reis magos">
+                        <p id="product-price"> $165 </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+
+            <button class="login-button">LOGIN</button>
+
+        </footer>
+
     </header>
-    
-    </table>
+
 </body>
 
 </html>
