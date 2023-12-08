@@ -17,3 +17,8 @@ class Produto(db.Model):
     nome = db.Column(db.String(150))
     descricao = db.Column(db.String[500])
     valor = db.Column(db.Float)
+
+    def __init__(self, nome, valor, descricao):
+        self.nome = nome
+        self.valor = valor
+        self.descricao = descricao
